@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="937.0" prefWidth="1580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techlacomputer.controller.SupplierFormController">
+   <children>
+      <Pane layoutX="58.0" layoutY="106.0" prefHeight="165.0" prefWidth="1465.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="141.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Supplier detail" textFill="#1c31a8">
+               <font>
+                  <Font name="Corbel Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Line endX="1832.0" endY="1.52587890625E-5" layoutX="-389.0" layoutY="27.0" startX="552.0" stroke="#939393" />
+         </children>
+      </Pane>
+      <Pane layoutX="58.0" layoutY="353.0" opacity="0.95" prefHeight="550.0" prefWidth="1465.0" style="-fx-background-color: #ffffff;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <TableView fx:id="tblSupplier" layoutX="-1.0" prefHeight="550.0" prefWidth="1465.0" styleClass="shadow">
+               <columns>
+                  <TableColumn fx:id="clmSupplierId" prefWidth="293.0" text="Supplier ID" />
+                  <TableColumn fx:id="clmSupplierName" prefWidth="293.0" text="Supplier Name" />
+                  <TableColumn fx:id="clmSupplierAddress" prefWidth="293.0" text="Address" />
+                  <TableColumn fx:id="clmSupplierContact" prefWidth="293.0" text="Contact" />
+                  <TableColumn fx:id="clmOption" prefWidth="293.0" text="Option" />
+               </columns>
+               <stylesheets>
+                  <URL value="@../value/Style.Css" />
+                  <URL value="@../value/Button.Css" />
+               </stylesheets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="1127.0" layoutY="281.0" opacity="0.86" prefHeight="51.0" prefWidth="386.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXTextField fx:id="txtSearch" layoutX="26.0" layoutY="7.0" onKeyReleased="#txtSearchKeyReleaseEvent" prefHeight="37.0" prefWidth="314.0" promptText="Search here" unFocusColor="#dff9fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="37.0" fitWidth="35.0" layoutX="340.0" layoutY="7.0">
+               <image>
+                  <Image url="@../assets/background/dwadwadadda.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="100.0" layoutY="164.0" opacity="0.86" prefHeight="51.0" prefWidth="436.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="22.0" layoutY="7.0" prefHeight="37.0" prefWidth="373.0" promptText="Suppler Name..." styleClass="shadow" stylesheets="@../value/Button.Css" unFocusColor="#dff9fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="583.0" layoutY="164.0" opacity="0.86" prefHeight="51.0" prefWidth="407.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="26.0" layoutY="7.0" prefHeight="37.0" prefWidth="351.0" promptText="Supplier Address..." styleClass="shadow" stylesheets="@../value/Button.Css" unFocusColor="#dff9fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="1024.0" layoutY="168.0" opacity="0.86" prefHeight="51.0" prefWidth="296.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="26.0" layoutY="7.0" prefHeight="37.0" prefWidth="235.0" promptText="Supplier Contact..." styleClass="shadow" stylesheets="@../value/Button.Css" unFocusColor="#dff9fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnAddUpdate" layoutX="1380.0" layoutY="171.0" onAction="#tbnAddUpdateOnAction" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: #2f3542; -fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css" text="Add" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label layoutX="29.0" layoutY="31.0" prefHeight="38.0" prefWidth="228.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Supplier Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

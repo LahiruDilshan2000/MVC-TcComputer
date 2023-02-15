@@ -1,0 +1,76 @@
+.menuItem:hover{
+    -fx-border-color: #660099;
+    -fx-border-width: 5px 0px 5px 0px;
+    -fx-scale-y:1.05;
+    -fx-scale-x:1.05;
+}
+
+.sidebarItem:hover{
+    /*-fx-background-color: #485460/*#146886*/;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-text-fill: WHITE;
+}
+
+.reportBar:hover{
+    -fx-background-color: #485460;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-text-fill: WHITE;
+}
+.gradient-background{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #3c40c6, #2d98da);
+}
+.gradient-background1 {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #0a3d62, #079992);
+}
+.gradient-background2 {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #74b9ff, #ffffff);
+}
+.gradient-background3 {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #0a3d62, #227093);
+}
+.gradient-background11 {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #341f97, #5f27cd);
+}
+.gradient-background12 {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #c0392b, #d35400);
+}
+.gradient-background13 {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #10ac84, #7bed9f);
+}
+.gradient-background14 {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #2f3542, #747d8c);
+}
+.gradient-background15 {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #833471, #EA2027);
+}
+.gradient-line {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #0a3d62, #227093);
+}
+.lineChart{
+    -fx-stroke: #0fb9b1;
+}
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.2), 10.0, 0.0, 0.0, 10.0);
+}
+.axis{
+    -fx-stroke: #ffffff;
+    -fx-fill: #ffffff;
+    -fx-font-size: 24;
+    -fx-tick-label-fill: #ffffff;
+}
+/*.default-color0.chart-pie{-fx-pie-color: transparent}
+.default-color1.chart-pie{-fx-pie-color: transparent}
+.default-color2.chart-pie{-fx-pie-color: transparent}
+.default-color3.chart-pie{-fx-pie-color: transparent}*/
+
+.chart-pie-label{
+    -fx-fill: #ffffff;
+    -fx-stroke: #ffffff;
+    -fx-font-size: 20;
+}
+.chart-pie-label-line{
+    -fx-fill: #ffffff;
+    -fx-stroke: #ffffff;
+}

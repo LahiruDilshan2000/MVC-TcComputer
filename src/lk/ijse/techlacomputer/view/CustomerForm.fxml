@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="937.0" prefWidth="1580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techlacomputer.controller.CustomerFormController">
+   <children>
+      <Pane layoutX="67.0" layoutY="110.0" prefHeight="188.0" prefWidth="1458.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30px;" styleClass="shadow" stylesheets="@../value/Button.Css" />
+      <Pane layoutX="109.0" layoutY="403.0" opacity="0.95" prefHeight="499.0" prefWidth="1374.0" style="-fx-background-color: #ffffff;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <TableView fx:id="tblCustomer" layoutX="-1.0" prefHeight="499.0" prefWidth="1374.0" styleClass="shadow">
+               <columns>
+                  <TableColumn fx:id="clmCusId" prefWidth="274.0" text="Customer ID" />
+                  <TableColumn fx:id="clmName" prefWidth="274.0" text="Customer Name" />
+                  <TableColumn fx:id="clmAddress" prefWidth="274.0" text="Address" />
+                  <TableColumn fx:id="clmContact" prefWidth="274.0" text="Contact" />
+                  <TableColumn fx:id="clmOption" prefWidth="274.0" text="Option" />
+               </columns>
+               <stylesheets>
+                  <URL value="@../value/Button.Css" />
+                  <URL value="@../value/Style.Css" />
+               </stylesheets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="87.0" layoutY="165.0" opacity="0.86" prefHeight="51.0" prefWidth="411.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="26.0" layoutY="7.0" prefHeight="37.0" prefWidth="364.0" promptText="Customer Name..." styleClass="shadow" stylesheets="@../value/Button.Css" unFocusColor="#dff9fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="552.0" layoutY="165.0" opacity="0.86" prefHeight="51.0" prefWidth="411.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="26.0" layoutY="7.0" prefHeight="37.0" prefWidth="354.0" promptText="Address..." styleClass="shadow" stylesheets="@../value/Button.Css" unFocusColor="#dff9fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="1011.0" layoutY="165.0" opacity="0.86" prefHeight="51.0" prefWidth="285.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="26.0" layoutY="7.0" prefHeight="37.0" prefWidth="226.0" promptText="Contact" styleClass="shadow" stylesheets="@../value/Button.Css" unFocusColor="#dff9fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnAddUpdate" layoutX="1375.0" layoutY="169.0" onAction="#tbnAddUpdateOnAction" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: #2f3542; -fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css" text="Add" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Pane fx:id="cusIdPane" layoutX="706.0" layoutY="232.0" opacity="0.86" prefHeight="51.0" prefWidth="152.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <Label fx:id="lblCusId" layoutX="39.0" layoutY="12.0" prefHeight="28.0" prefWidth="86.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="     " textFill="RED">
+               <font>
+                  <Font name="Corbel" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Line endX="1308.0" endY="1.52587890625E-5" layoutX="192.0" layoutY="137.0" startX="58.0" startY="3.0517578125E-5" stroke="#939393" />
+      <Label layoutX="87.0" layoutY="121.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Customer detail" textFill="#1c31a8">
+         <font>
+            <Font name="Corbel Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="24.0" prefHeight="38.0" prefWidth="238.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Customer Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Pane layoutX="1139.0" layoutY="327.0" opacity="0.86" prefHeight="51.0" prefWidth="386.0" style="-fx-background-color: #dff9fb; -fx-background-radius: 30px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXTextField fx:id="txtSearch" layoutX="26.0" layoutY="7.0" onKeyReleased="#txtSearchKeyReleaseEvent" prefHeight="37.0" prefWidth="314.0" promptText="Search here" unFocusColor="#dff9fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="37.0" fitWidth="35.0" layoutX="340.0" layoutY="7.0">
+               <image>
+                  <Image url="@../assets/background/dwadwadadda.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

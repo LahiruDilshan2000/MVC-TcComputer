@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loadPane" prefHeight="937.0" prefWidth="1580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techlacomputer.controller.PlaceOrderFormController">
+   <children>
+      <Pane layoutX="36.0" layoutY="86.0" prefHeight="292.0" prefWidth="1520.0" style="-fx-background-color: #ffffff;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="446.0" layoutY="65.0" prefHeight="28.0" prefWidth="165.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Label">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="222.0" layoutY="65.0" prefHeight="28.0" prefWidth="151.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Label">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrderId" layoutX="52.0" layoutY="69.0" prefHeight="27.0" prefWidth="91.0" styleClass="shadow" stylesheets="@../value/Button.Css" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="912.0" layoutY="134.0" opacity="0.86" prefHeight="44.0" prefWidth="282.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+               <children>
+                  <Label fx:id="lblCusContact" alignment="CENTER" layoutX="92.0" layoutY="8.0" prefHeight="23.0" prefWidth="165.0" text="Customer Contact...">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="6.0" prefHeight="28.0" prefWidth="72.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Contact :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="625.0" layoutY="134.0" opacity="0.86" prefHeight="44.0" prefWidth="270.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+               <children>
+                  <Label fx:id="lblCusAddress" alignment="CENTER" layoutX="89.0" layoutY="8.0" prefHeight="26.0" prefWidth="165.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Customer Address..">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="7.0" prefHeight="28.0" prefWidth="72.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Address :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="866.0" layoutY="213.0" opacity="0.86" prefHeight="44.0" prefWidth="256.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+               <children>
+                  <Label fx:id="lblQtyOnHand" alignment="CENTER" layoutX="109.0" layoutY="8.0" prefHeight="28.0" prefWidth="137.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Qty On Hand...">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="7.0" layoutY="8.0" prefHeight="28.0" prefWidth="109.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Qty On Hand :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="571.0" layoutY="213.0" opacity="0.86" prefHeight="44.0" prefWidth="282.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+               <children>
+                  <Label fx:id="lblItemName" alignment="CENTER" layoutX="104.0" layoutY="8.0" prefHeight="23.0" prefWidth="165.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Item Name...">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="91.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Item Name :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="1354.0" layoutY="213.0" opacity="0.86" prefHeight="44.0" prefWidth="129.0" style="-fx-background-color: #dff9fb #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+               <children>
+                  <JFXTextField fx:id="txtQty" layoutX="52.0" layoutY="4.0" prefHeight="37.0" prefWidth="62.0" styleClass="shadow" stylesheets="@../value/Button.Css" unFocusColor="#0033ff">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="14.0" layoutY="11.0" prefHeight="25.0" prefWidth="38.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Qty :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="1135.0" layoutY="213.0" opacity="0.86" prefHeight="44.0" prefWidth="204.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+               <children>
+                  <Label fx:id="lblUnitPrice" alignment="CENTER" layoutX="91.0" layoutY="8.0" prefHeight="28.0" prefWidth="109.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Unit Price...">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="8.0" prefHeight="28.0" prefWidth="83.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Unit Price :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="22.0" layoutY="14.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Order detail" textFill="#1c31a8">
+               <font>
+                  <Font name="Corbel Bold Italic" size="21.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <JFXButton fx:id="btnAdd" layoutX="1405.0" layoutY="388.0" onAction="#tbnAddOnAction" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #079992; -fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css" text="Add to Cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Pane layoutX="28.0" layoutY="445.0" prefHeight="381.0" prefWidth="1528.0" style="-fx-background-color: #ffffff;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <TableView fx:id="tblOrder" prefHeight="381.0" prefWidth="1528.0" styleClass="shadow">
+              <columns>
+                <TableColumn fx:id="clmItemCode" prefWidth="218.0" text="Item Code" />
+                <TableColumn fx:id="clmItemBrand" prefWidth="218.0" text="Brand Name" />
+                  <TableColumn fx:id="clmItemName" prefWidth="218.0" text="Item Name" />
+                  <TableColumn fx:id="clmUnitPrice" prefWidth="218.0" text="Unit Price" />
+                  <TableColumn fx:id="clmQty" prefWidth="218.0" text="Qty " />
+                  <TableColumn fx:id="clmTotal" prefWidth="218.0" text="Total" />
+                  <TableColumn fx:id="clmOption" prefWidth="218.0" text="Option" />
+              </columns>
+               <stylesheets>
+                  <URL value="@../value/Button.Css" />
+                  <URL value="@../value/Style.Css" />
+               </stylesheets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="74.0" layoutY="222.0" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXComboBox fx:id="cmbCusId" labelFloat="true" layoutX="21.0" layoutY="5.0" onAction="#cmbCusIdOnAction" prefHeight="31.0" prefWidth="173.0" promptText="Customer ID..." styleClass="shadow" stylesheets="@../value/Button.Css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+         </children>
+      </Pane>
+      <Pane layoutX="334.0" layoutY="222.0" opacity="0.86" prefHeight="44.0" prefWidth="309.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <Label fx:id="lblCusName" alignment="CENTER" layoutX="141.0" layoutY="8.0" prefHeight="26.0" prefWidth="151.0" text="Customer Name...">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="4.0" layoutY="6.0" prefHeight="28.0" prefWidth="137.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Customer Name :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="74.0" layoutY="302.0" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <JFXComboBox fx:id="cmbItemCode" labelFloat="true" layoutX="21.0" layoutY="5.0" onAction="#cmbItemCodeOnAction" prefHeight="31.0" prefWidth="173.0" promptText="Item Code..." styleClass="shadow" stylesheets="@../value/Button.Css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+         </children>
+      </Pane>
+      <Pane layoutX="334.0" layoutY="302.0" opacity="0.86" prefHeight="44.0" prefWidth="256.0" style="-fx-background-color: #dff9fb;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <Label fx:id="lblBrandName" alignment="CENTER" layoutX="77.0" layoutY="8.0" prefHeight="23.0" prefWidth="165.0" text="Item Brand...">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="28.0" prefWidth="54.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Brand :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="46.0" layoutY="848.0" opacity="0.86" prefHeight="57.0" prefWidth="309.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <Label layoutX="14.0" layoutY="5.0" prefHeight="23.0" prefWidth="99.0" text="Total :" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal" layoutX="113.0" layoutY="6.0" prefHeight="31.0" prefWidth="173.0" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnPlaceOrder" layoutX="1345.0" layoutY="848.0" onAction="#btnPlaceOrderOnAction" prefHeight="57.0" prefWidth="185.0" style="-fx-background-color: #2f3542; -fx-background-radius: 30px;" styleClass="shadow" stylesheets="@../value/Button.Css" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fx:id="picEdit" fitHeight="31.0" fitWidth="31.0" layoutX="296.0" layoutY="229.0">
+         <image>
+            <Image url="@../assets/background/pencil-96.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnEdit" ellipsisString="." layoutX="296.0" layoutY="229.0" onAction="#btnEditOnAction" prefHeight="23.0" prefWidth="31.0" style="-fx-background-radius: 20px;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Line endX="1308.0" endY="1.52587890625E-5" layoutX="226.0" layoutY="115.0" startX="-37.0" startY="1.52587890625E-5" stroke="#939393" />
+      <Label layoutX="36.0" layoutY="23.0" prefHeight="38.0" prefWidth="227.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Order Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

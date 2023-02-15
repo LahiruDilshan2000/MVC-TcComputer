@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="937.0" prefWidth="1580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techlacomputer.controller.IncomeFormController">
+   <children>
+      <Pane layoutX="34.0" layoutY="71.0" prefHeight="479.0" prefWidth="958.0" style="-fx-background-color: #ffffff;" styleClass="shadow" stylesheets="@../value/Button.Css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="622.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="418.0" fitWidth="958.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/background/efsefesf.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="30.0" layoutY="14.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Earning Summary">
+               <font>
+                  <Font name="Microsoft Tai Le Bold" size="27.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbYear" layoutX="649.0" layoutY="18.0" prefHeight="25.0" prefWidth="130.0" promptText="Year" style="-jfx-focus-color: #a55eea; -jfx-unfocus-color: #0984e3;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXComboBox fx:id="cmbMonth" layoutX="803.0" layoutY="18.0" onAction="#cmbMonthOnAction" prefHeight="31.0" prefWidth="130.0" promptText="Month" style="-jfx-focus-color: #a55eea; -jfx-unfocus-color: #0984e3;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <Label fx:id="lblEarning" alignment="CENTER" layoutX="382.0" layoutY="58.0" prefHeight="34.0" prefWidth="235.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <LineChart fx:id="lineChart" layoutX="1.0" layoutY="91.0" legendVisible="false" prefHeight="386.0" prefWidth="958.0" stylesheets="@../value/Button.Css">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="axis" />
+               </styleClass>
+            </LineChart>
+         </children>
+      </Pane>
+      <Pane layoutX="4.0" layoutY="505.0" prefHeight="418.0" prefWidth="842.0" style="-fx-background-color: WHITE;" styleClass="shadow" stylesheets="@../value/Button.Css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <ImageView fitHeight="358.0" fitWidth="842.0" layoutY="60.0" opacity="0.89" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/background/eeeffeeee.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="37.0" layoutY="14.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Expenses Summary">
+               <font>
+                  <Font name="Microsoft Tai Le Bold" size="27.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbOutcomeYear" layoutX="489.0" layoutY="17.0" prefHeight="25.0" prefWidth="130.0" promptText="Year" style="-jfx-focus-color: #a55eea; -jfx-unfocus-color: #0984e3;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXComboBox fx:id="cmbOutcomeMonth" layoutX="643.0" layoutY="17.0" onAction="#cmbOutcomeMonthOnAction" prefHeight="31.0" prefWidth="130.0" promptText="Month" style="-jfx-focus-color: #a55eea; -jfx-unfocus-color: #0984e3;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <Label fx:id="lblExpenses" alignment="CENTER" layoutX="319.0" layoutY="59.0" prefHeight="34.0" prefWidth="235.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <LineChart fx:id="outcomeLineChart" layoutX="4.0" layoutY="94.0" legendVisible="false" prefHeight="323.0" prefWidth="830.0" stylesheets="@../value/Button.Css">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="axis" />
+               </styleClass>
+            </LineChart>
+         </children>
+      </Pane>
+      <Pane layoutX="872.0" layoutY="519.0" prefHeight="418.0" prefWidth="579.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <Pane layoutX="50.0" layoutY="-25.0" prefHeight="418.0" prefWidth="579.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+               <children>
+                  <Pane layoutX="55.0" layoutY="-29.0" prefHeight="418.0" prefWidth="579.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+                     <children>
+                        <ImageView fitHeight="350.0" fitWidth="579.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/background/gaf.jpg" />
+                           </image>
+                        </ImageView>
+                        <PieChart fx:id="pieChart" layoutX="6.0" layoutY="19.0" legendVisible="false" prefHeight="374.0" prefWidth="568.0" style="-fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css" />
+                        <Label layoutX="27.0" layoutY="14.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Earning vs Expenses">
+                           <font>
+                              <Font name="Microsoft Tai Le Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="979.0" layoutY="75.0" prefHeight="374.0" prefWidth="492.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+         <children>
+            <Pane layoutX="37.0" layoutY="-32.0" prefHeight="374.0" prefWidth="492.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+               <children>
+                  <Pane layoutX="37.0" layoutY="-33.0" prefHeight="374.0" prefWidth="509.0" style="-fx-background-radius: 20px;" stylesheets="@../value/Button.Css">
+                     <children>
+                        <Label layoutX="97.0" layoutY="25.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Total Earning this month" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Tai Le Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblIncomeTotal" alignment="CENTER" layoutX="111.0" layoutY="80.0" prefHeight="85.0" prefWidth="315.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="12025949" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Tai Le Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="110.0" layoutY="86.0" prefHeight="71.0" prefWidth="65.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Rs" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Tai Le Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Line endX="217.0" layoutX="228.0" layoutY="175.0" startX="-165.0" stroke="#b2b2b2" />
+                        <Label fx:id="lblOutComeTotal" alignment="CENTER" layoutX="111.0" layoutY="259.0" prefHeight="78.0" prefWidth="315.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="12025949" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Tai Le Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="110.0" layoutY="263.0" prefHeight="71.0" prefWidth="65.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Rs" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Tai Le Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="134.0" layoutY="208.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Total Expane of this month" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Tai Le Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="gradient-background" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

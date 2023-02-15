@@ -1,0 +1,9 @@
+.button:hover{
+    -fx-border-color: BLACK;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px 1px 1px 1px;
+    /*-fx-text-fill: WHITE;*/
+}
+.text-field{
+    -fx-text-fill: #ffffff;
+}

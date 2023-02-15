@@ -1,0 +1,20 @@
+.axis{
+    -fx-stroke: #ffffff;
+    -fx-fill: #ffffff;
+    -fx-font-size: 24;
+    -fx-tick-label-fill: #ffffff;
+}
+.default-color0.chart-pie{-fx-pie-color: transparent}
+.default-color1.chart-pie{-fx-pie-color: transparent}
+.default-color2.chart-pie{-fx-pie-color: transparent}
+.default-color3.chart-pie{-fx-pie-color: transparent}
+
+.chart-pie-label{
+    -fx-fill: #ffffff;
+    -fx-stroke: #ffffff;
+    -fx-font-size: 20;
+}
+.chart-pie-label-line{
+    -fx-fill: #ffffff;
+    -fx-stroke: #ffffff;
+}

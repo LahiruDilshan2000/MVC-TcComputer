@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techlacomputer.controller.ReceptionDashBoardFormController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="1000.0" prefWidth="1900.0" styleClass="gradient-background1" stylesheets="@../value/Button.Css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="362.0" prefWidth="1900.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Pane layoutX="298.0" prefHeight="52.0" prefWidth="1601.0" AnchorPane.leftAnchor="298.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane layoutX="391.0" layoutY="-21.0" prefHeight="62.0" prefWidth="63.0" style="-fx-background-radius: 100;" styleClass="gradient-background1" stylesheets="@../value/Button.Css" />
+                  <Pane layoutX="1403.0" layoutY="-45.0" prefHeight="114.0" prefWidth="128.0" style="-fx-background-radius: 100;" styleClass="gradient-background1" stylesheets="@../value/Button.Css" />
+                  <ImageView fitHeight="44.0" fitWidth="52.0" layoutX="1558.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/background/wdadd.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnExit" layoutX="1559.0" layoutY="4.0" onAction="#btnExitOnAction" opacity="0.43" prefHeight="44.0" prefWidth="42.0" style="-fx-background-radius: 30px;" text=".">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+               </children>
+            </Pane>
+            <AnchorPane fx:id="loadPane" layoutX="310.0" layoutY="55.0" prefHeight="937.0" prefWidth="1580.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="55.0">
+               <children>
+                  <Label layoutX="-115.0" layoutY="670.0" opacity="0.3" prefHeight="161.0" prefWidth="986.0" text="Techla Computers" textFill="#38ada9">
+                     <font>
+                        <Font name="System Bold Italic" size="110.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutY="42.0" prefHeight="303.0" prefWidth="1580.0" spacing="30.0" AnchorPane.bottomAnchor="592.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
+                     <children>
+                        <Pane prefHeight="268.0" prefWidth="263.0" style="-fx-background-radius: 20px; -fx-background-color: #006266;">
+                           <stylesheets>
+                              <URL value="@../value/Button.Css" />
+                              <URL value="@../value/Pane.Css" />
+                              <URL value="@../value/Pane.Css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="paneItem" />
+                           </styleClass>
+                           <children>
+                              <ImageView fitHeight="265.0" fitWidth="264.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/awfawfa.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="14.0" layoutY="111.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Wecome" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="152.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="25F Rainy day" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="268.0" prefWidth="263.0" style="-fx-background-radius: 20px;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="21.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Total Orders" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblOrder" alignment="CENTER" layoutX="76.0" layoutY="44.0" prefHeight="34.0" prefWidth="88.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="191.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/agawgwa.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="182.0" fitWidth="264.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/saffff.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <stylesheets>
+                              <URL value="@../value/Button.Css" />
+                              <URL value="@../value/Pane.Css" />
+                              <URL value="@../value/Pane.Css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="paneItem" />
+                              <String fx:value="gradient-background1" />
+                              <String fx:value="gradient-background11" />
+                           </styleClass>
+                        </Pane>
+                        <Pane prefHeight="268.0" prefWidth="263.0" style="-fx-background-radius: 20px;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="25.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Total Repairs" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRepair" alignment="CENTER" layoutX="87.0" layoutY="46.0" prefHeight="34.0" prefWidth="90.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="182.0" fitWidth="264.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/awgesg.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="34.0" fitWidth="32.0" layoutX="206.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/asfgage.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <stylesheets>
+                              <URL value="@../value/Button.Css" />
+                              <URL value="@../value/Pane.Css" />
+                              <URL value="@../value/Pane.Css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="paneItem" />
+                              <String fx:value="gradient-background14" />
+                           </styleClass>
+                        </Pane>
+                        <Pane prefHeight="240.0" prefWidth="263.0" style="-fx-background-radius: 20px;">
+                           <children>
+                              <Label layoutX="12.0" layoutY="14.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Total Customers" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="52.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Total Suppliers" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCustomer" alignment="CENTER" layoutX="144.0" layoutY="10.0" prefHeight="34.0" prefWidth="74.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="0" textFill="#18ff4a">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="182.0" fitWidth="264.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/sgsdhh.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lblSupplier" alignment="CENTER" layoutX="181.0" layoutY="48.0" prefHeight="34.0" prefWidth="74.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="0" textFill="#18ff4a">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <stylesheets>
+                              <URL value="@../value/Button.Css" />
+                              <URL value="@../value/Pane.Css" />
+                              <URL value="@../value/Pane.Css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="paneItem" />
+                              <String fx:value="gradient-background15" />
+                           </styleClass>
+                        </Pane>
+                        <Pane prefHeight="268.0" prefWidth="386.0" style="-fx-background-color: #7158e2; -fx-background-radius: 20px;">
+                           <children>
+                              <Label layoutX="69.0" layoutY="51.0" styleClass="shadow" stylesheets="@../value/Button.Css" text=" Orders" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="260.0" layoutY="51.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Repairs" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblOrderTotal" alignment="CENTER" layoutX="12.0" layoutY="88.0" prefHeight="38.0" prefWidth="191.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="0" textFill="#ff0037">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRepairTotal" alignment="CENTER" layoutX="199.0" layoutY="88.0" prefHeight="38.0" prefWidth="184.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="0" textFill="#ff003c">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="148.0" fitWidth="386.0" layoutX="-1.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/wagawg.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="97.0" layoutY="14.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Today Total Income of" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="26.0" endY="20.0" layoutX="176.0" layoutY="102.0" startX="26.0" startY="-40.0" stroke="WHITE" />
+                           </children>
+                           <stylesheets>
+                              <URL value="@../value/Button.Css" />
+                              <URL value="@../value/Pane.Css" />
+                              <URL value="@../value/Pane.Css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="paneItem" />
+                           </styleClass>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Pane layoutY="412.0" prefHeight="28.0" prefWidth="115.0" AnchorPane.bottomAnchor="525.0" AnchorPane.leftAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="505.0" fitWidth="1019.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/background/awghrdhr.jpg" />
+                           </image>
+                        </ImageView>
+                        <LineChart fx:id="lineChart" layoutX="6.0" layoutY="84.0" legendVisible="false" prefHeight="381.0" prefWidth="986.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Label layoutX="86.0" layoutY="466.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Orders" textFill="WHITE" />
+                        <Label layoutX="444.0" layoutY="466.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Repairs" textFill="WHITE" />
+                        <Pane layoutX="58.0" layoutY="466.0" prefHeight="20.0" prefWidth="19.0" style="-fx-background-color: #8e44ad;" styleClass="shadow" stylesheets="@../value/Button.Css" />
+                        <Pane layoutX="406.0" layoutY="466.0" prefHeight="20.0" prefWidth="19.0" style="-fx-background-color: #0fb9b1;" styleClass="shadow" stylesheets="@../value/Button.Css" />
+                        <Label layoutX="21.0" layoutY="41.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Orders and Repairs Summary" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblOrderMonthlyTotal" alignment="CENTER" layoutX="158.0" layoutY="466.0" prefHeight="21.0" prefWidth="128.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblRepairMonthlyTotal" alignment="CENTER" layoutX="516.0" layoutY="466.0" prefHeight="21.0" prefWidth="128.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="1038.0" layoutY="416.0" prefHeight="472.0" prefWidth="468.0" style="-fx-background-radius: 20px;" AnchorPane.bottomAnchor="49.0">
+                     <children>
+                        <Pane layoutX="31.0" layoutY="-19.0" prefHeight="472.0" prefWidth="468.0" style="-fx-background-radius: 20px;">
+                           <children>
+                              <Pane layoutX="32.0" layoutY="-23.0" prefHeight="472.0" prefWidth="468.0" style="-fx-background-radius: 20px;">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="gradient-background11" />
+                                    <String fx:value="paneItem" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="14.0" text="Income persentages" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <PieChart fx:id="pieChart" layoutX="-39.0" legendVisible="false" prefHeight="505.0" prefWidth="529.0" style="-fx-background-radius: 20px;" styleClass="shadow" stylesheets="@../value/Button.Css" />
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@../value/Button.Css" />
+                                    <URL value="@../value/Pane.Css" />
+                                 </stylesheets>
+                              </Pane>
+                           </children>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="gradient-background" />
+                           </styleClass>
+                           <stylesheets>
+                              <URL value="@../value/Button.Css" />
+                              <URL value="@../value/Pane.Css" />
+                           </stylesheets>
+                        </Pane>
+                     </children>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="gradient-background2" />
+                     </styleClass>
+                     <stylesheets>
+                        <URL value="@../value/Button.Css" />
+                        <URL value="@../value/Pane.Css" />
+                     </stylesheets>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="7.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1600.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox layoutX="35.0" layoutY="191.0" prefHeight="432.0" prefWidth="264.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="1.0">
+                     <children>
+                        <JFXButton fx:id="btnDashboard" alignment="BASELINE_LEFT" onAction="#btnDashboardOnAction" prefHeight="50.0" prefWidth="304.0" stylesheets="@../value/Button.Css" text="  Dashboard" textFill="#b0bfd0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="25.0" opacity="0.86" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/safafwafawfgawgw.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="sidebarItem" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCustomer" alignment="BASELINE_LEFT" onAction="#btnCustomerOnAction" prefHeight="50.0" prefWidth="300.0" stylesheets="@../value/Button.Css" text="  Customers" textFill="#b0bfd0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/awdwdaw.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="sidebarItem" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnOrders" alignment="BASELINE_LEFT" layoutX="15.0" layoutY="81.0" onAction="#btnOrdersOnAction" prefHeight="50.0" prefWidth="300.0" stylesheets="@../value/Button.Css" text="Orders" textFill="#b0bfd0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" opacity="0.83" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/icons8-purchase-order-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="sidebarItem" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnRepair" alignment="BASELINE_LEFT" layoutX="15.0" layoutY="152.0" onAction="#btnRepairOnAction" prefHeight="50.0" prefWidth="300.0" stylesheets="@../value/Button.Css" text=" Repairs" textFill="#b0bfd0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/icons8-repair-64.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="sidebarItem" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSupplier" alignment="BASELINE_LEFT" onAction="#btnSupplierOnAction" prefHeight="50.0" prefWidth="300.0" stylesheets="@../value/Button.Css" text="  Suppliers" textFill="#b0bfd0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/wadawfwaf.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="sidebarItem" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSupplies" alignment="BASELINE_LEFT" onAction="#btnSuppliesOnAction" prefHeight="50.0" prefWidth="300.0" stylesheets="@../value/Button.Css" text="  Supplies" textFill="#b0bfd0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="22.0" opacity="0.93" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/wadawdwwada.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="sidebarItem" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnReport" alignment="BASELINE_LEFT" onAction="#btnReportOnAction" prefHeight="50.0" prefWidth="300.0" stylesheets="@../value/Button.Css" text=" Reports" textFill="#b6bdc6">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/background/awfawf.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="sidebarItem" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </VBox>
+                  <Label fx:id="lblTime" alignment="BASELINE_CENTER" layoutX="66.0" layoutY="932.0" prefHeight="28.0" prefWidth="155.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" alignment="BASELINE_CENTER" layoutX="35.0" layoutY="958.0" prefHeight="28.0" prefWidth="221.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="80.0" layoutY="859.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/background/awdawd.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnLogOut" alignment="CENTER_RIGHT" layoutX="71.0" layoutY="854.0" onAction="#btnLogOutOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-radius: 20px;" text="Log out">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <stylesheets>
+                        <URL value="@../value/Button.Css" />
+                        <URL value="@../value/hoverButton.Css" />
+                     </stylesheets>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Circle layoutX="178.0" layoutY="6.0" opacity="0.28" radius="53.0" stroke="DODGERBLUE" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="0.15533980582524276" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="BLACK" offset="0.007246376811594203" />
+                              <Stop color="#0fbcf9" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle layoutX="107.0" layoutY="50.0" opacity="0.28" radius="26.0" stroke="DODGERBLUE" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="0.15533980582524276" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="BLACK" offset="0.007246376811594203" />
+                              <Stop color="#0fbcf9" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Pane layoutX="133.0" layoutY="599.0" prefHeight="131.0" prefWidth="136.0" style="-fx-background-radius: 100;" styleClass="gradient-background1" stylesheets="@../value/Button.Css" />
+                  <Pane layoutX="14.0" layoutY="920.0" prefHeight="51.0" prefWidth="52.0" style="-fx-background-radius: 100;" styleClass="gradient-background1" stylesheets="@../value/Button.Css">
+                     <children>
+                        <Pane layoutX="28.0" layoutY="-16.0" prefHeight="37.0" prefWidth="42.0" style="-fx-background-radius: 100;" styleClass="gradient-background1" stylesheets="@../value/Button.Css" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="81.0" layoutY="628.0" prefHeight="51.0" prefWidth="52.0" style="-fx-background-radius: 100;" styleClass="gradient-background1" stylesheets="@../value/Button.Css" />
+                  <ImageView fitHeight="83.0" fitWidth="74.0" layoutX="58.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/background/vdsfafwaf.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblUser" layoutX="147.0" layoutY="83.0" prefHeight="28.0" prefWidth="128.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="wdaw" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="50.0" layoutY="50.0" onAction="#btnEditUserOnAction" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 50px; -fx-border-color: #0be881; -fx-border-radius: 60px;" text="." textFill="#ababab">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <Label layoutX="145.0" layoutY="111.0" prefHeight="20.0" prefWidth="94.0" styleClass="shadow" stylesheets="@../value/Button.Css" text="Manage profile" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Circle layoutX="-14.0" layoutY="549.0" opacity="0.43" radius="45.0" stroke="#0984e3" strokeType="INSIDE" styleClass="gradient-background1">
+               <fill>
+                  <LinearGradient endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="BLACK" offset="0.007246376811594203" />
+                        <Stop color="#0985e3" offset="0.5181159420289855" />
+                        <Stop color="#0985e3" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <Pane fx:id="ReportPane1" layoutX="583.0" layoutY="176.0" prefHeight="1000.0" prefWidth="1814.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane fx:id="ReportPane2" layoutX="296.0" layoutY="292.0" prefHeight="316.0" prefWidth="212.0" style="-fx-background-color: #5352ed; -fx-background-radius: 20 20 20 0;" styleClass="shadow" stylesheets="@../value/Button.Css">
+                     <children>
+                        <VBox layoutX="4.0" layoutY="3.0" prefHeight="310.0" prefWidth="204.0" spacing="10.0">
+                           <children>
+                              <JFXButton alignment="BASELINE_LEFT" onAction="#btnCustomerReportOnAction" prefHeight="50.0" prefWidth="230.0" stylesheets="@../value/Button.Css" text="   Customers" textFill="#cdcdcd">
+                                 <font>
+                                    <Font name="System Bold Italic" size="17.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="reportBar" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton alignment="BASELINE_LEFT" onAction="#btnSupplierReportOnAction" prefHeight="50.0" prefWidth="230.0" stylesheets="@../value/Button.Css" text="   Suppliers" textFill="#cdcdcd">
+                                 <font>
+                                    <Font name="System Bold Italic" size="17.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="reportBar" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton alignment="BASELINE_LEFT" onAction="#btnOrderReportOnAction" prefHeight="50.0" prefWidth="230.0" stylesheets="@../value/Button.Css" text="   Orders" textFill="#cdcdcd">
+                                 <font>
+                                    <Font name="System Bold Italic" size="17.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="reportBar" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton alignment="BASELINE_LEFT" onAction="#btnRepairReportOnAction" prefHeight="50.0" prefWidth="230.0" stylesheets="@../value/Button.Css" text="   Repairs" textFill="#cdcdcd">
+                                 <font>
+                                    <Font name="System Bold Italic" size="17.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="reportBar" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton alignment="BASELINE_LEFT" onAction="#btnSuppliesReportOnAction" prefHeight="50.0" prefWidth="230.0" stylesheets="@../value/Button.Css" text="   Supplies" textFill="#cdcdcd">
+                                 <font>
+                                    <Font name="System Bold Italic" size="17.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="reportBar" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="editPane" layoutX="763.0" onMouseClicked="#editPaneOnAction" prefHeight="1000.0" prefWidth="1676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane layoutX="160.0" layoutY="51.0" prefHeight="519.0" prefWidth="402.0" style="-fx-background-color: #2f3640; -fx-background-radius: 20px;">
+                     <children>
+                        <Label layoutX="63.0" layoutY="151.0" text="User Name" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="63.0" layoutY="240.0" text="Password" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="44.0" layoutY="171.0" prefHeight="51.0" prefWidth="315.0" style="-fx-background-color: #1e272e; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+                           <children>
+                              <JFXTextField fx:id="txtUserId" labelFloat="true" layoutX="29.0" layoutY="7.0" prefHeight="37.0" prefWidth="239.0" styleClass="text-field" stylesheets="@../value/hoverButton.Css" unFocusColor="#1e272e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="274.0" layoutY="12.0">
+                                 <image>
+                                    <Image url="@../assets/background/adafawf.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton layoutX="274.0" layoutY="10.0" onAction="#btnEditFieldOnAction" prefHeight="28.0" prefWidth="27.0" text=".">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="44.0" layoutY="260.0" prefHeight="51.0" prefWidth="315.0" style="-fx-background-color: #1e272e; -fx-background-radius: 25px;" styleClass="shadow" stylesheets="@../value/Button.Css">
+                           <children>
+                              <JFXTextField fx:id="txtPass" labelFloat="true" layoutX="31.0" layoutY="7.0" prefHeight="37.0" prefWidth="239.0" styleClass="text-field" stylesheets="@../value/hoverButton.Css" unFocusColor="#1e272e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="txtPasswordField" layoutX="31.0" layoutY="7.0" prefHeight="37.0" prefWidth="239.0" styleClass="text-field" stylesheets="@../value/hoverButton.Css" unFocusColor="#1e272e" />
+                              <ImageView fx:id="picHide" fitHeight="26.0" fitWidth="27.0" layoutX="278.0" layoutY="14.0">
+                                 <image>
+                                    <Image url="@../assets/background/awgwag.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="picShow" fitHeight="28.0" fitWidth="27.0" layoutX="278.0" layoutY="12.0">
+                                 <image>
+                                    <Image url="@../assets/background/awafawf.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton layoutX="277.0" layoutY="10.0" onAction="#btnShowHideOnAction" prefHeight="28.0" prefWidth="27.0" text=".">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXButton>
+                           </children>
+                        </Pane>
+                        <JFXButton fx:id="btnSave" layoutX="153.0" layoutY="348.0" onAction="#btnSaveOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #485460; -fx-background-radius: 30px;" text="Update" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
